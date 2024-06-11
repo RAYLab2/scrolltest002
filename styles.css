@@ -1,0 +1,195 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.2;
+}
+
+header {
+  background-color: #e9e9e9;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 0 320px;
+  height: 80px;
+  width: 100%;
+}
+
+.navLeft {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.navRight {
+  display: flex;
+  height: 40px;
+  align-items: center;
+}
+
+.logo a {
+  color: #005386;
+  font-size: 24px;
+  text-decoration: none;
+  margin-right: 70px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  height: 40px;
+  margin-top: 13px;
+}
+
+.nav-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: #009ee5;
+}
+
+/* 컨테이너 */
+
+.container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-color: #000;
+  position: relative;
+}
+
+.media {
+  height: calc(100vh - 80px);
+  background-color: #d9d9d9;
+  position: relative;
+}
+
+.box {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #d9d9d9;
+  top: 50px;
+  left: 0;
+  z-index: 9999;
+}
+
+.media::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%; /* Adjust this value to change the height of the gradient */
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.slick {
+  width: 50%;
+  position: fixed !important;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: 10000;
+  height: 50px;
+  display: flex !important;
+  align-items: center;
+}
+
+.test {
+  text-align: center;
+  color: #fff;
+  transition: color 0.3s;
+  z-index: 9999;
+}
+
+.test:hover {
+  color: #009ee5;
+  font-weight: bold;
+}
+
+.hovered {
+  color: #009ee5;
+  font-weight: bold;
+}
+
+/*이전,다음*/
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  color: #fff;
+  background: none;
+  border: 0;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.slick-prev {
+  position: absolute;
+  left: -10px;
+  font-family: "fontawesome";
+  cursor: pointer;
+}
+
+.slick-prev::before {
+  content: "\f104";
+}
+
+.slick-next {
+  position: absolute;
+  font-family: "fontawesome";
+  cursor: pointer;
+  right: -10px;
+}
+
+.slick-next::before {
+  content: "\f054";
+}
+.slick-dots {
+  display: flex !important;
+  gap: 15px;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+}
+.slick-active::marker {
+  color: white !important;
+}
+li::marker {
+  color: grey;
+  cursor: pointer !important;
+}
+
+li button {
+  display: none !important;
+}

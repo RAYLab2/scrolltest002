@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #eee;
+  /* height: 3300px; */
+}
+
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ddd;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block;
+  text-transform: capitalize;
+}
+
+.sidenav a:hover {
+  color: #252525;
+}
+
+.main-content {
+  margin-left: 250px; /* Same as the width of the sidenav */
+  flex-grow: 1;
+  overflow-y: scroll;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+
+.alpha {
+  position: absolute;
+  z-index: 9999;
+  left: 50%;
+  transform: translate(-50%, 8%);
+}
+
+.test1 {
+  position: absolute;
+  z-index: 9998;
+  left: 50%;
+  transform: translate(-50%, 8%);
+  opacity: 0;
+  /* pointer-events: none;s */
+}
+
+
+.Layer {
+  width: calc(100% - 450px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 8%);
+}
